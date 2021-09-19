@@ -4,7 +4,10 @@ const mongoose = require("mongoose");
 require("dotenv/config");
 const postsRoute = require("./routes/posts");
 const bodyParser = require("body-parser");
+const cors = require("cors");
 
+// MIDDLEWARES
+app.use(cors());
 app.use(bodyParser.json());
 
 //ROUTES
